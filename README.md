@@ -40,4 +40,19 @@ If there is no problem with the file, you will see your data loaded here
 \
 in the Dashboard page.
 
-![drag-drop](/doc/images/drag-drop.jpg)
+![drag-drop](/doc/images/dashboard.jpg)
+
+
+At the top middle of the page you will find a color legend.
+
+![drag-drop](/doc/images/legend.jpg)
+
+
+Since this is a simple Bootstrap table, you will find all of the columns
+\
+click-sortable, and there is a search box by which you can filter out
+\
+various entries.
+
+
+![drag-drop](/doc/images/bootstrap-table.jpg)
