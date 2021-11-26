@@ -95,7 +95,7 @@ as you can see the blue color I use for recognized Adlumin traffic.
 
 By the rule I use for calculating if an IP address is valid or not, I was
 \
-ommitting a very curious entry.
+omitting a very curious entry.
 
 
 <code>
@@ -121,3 +121,17 @@ As this seemed like an important entry to keep and display for a user, I added
 the alert rule that valid CEF lines containing the words "malware" or "severe"
 \
 add to that entries Alert level.
+
+
+I think my application is relatively well-behaved. No files are stored. They
+\
+are processed in-memory and stored as serialized JSON objects. There is a
+\
+friendly Errors page. And there is a catch all route for when someone tries
+\
+to access an invalid url for the site.
+
+
+There is also a LogViewer.log file in the application's directory where
+\
+captured error information can be found.
