@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ONx9Pxuf6vo6hM6mVFTxHiM9A5QMX9J+NOKQBfevhJ1R8GKsWBTjcD+2hDQQqNNjF3uNv+DqGiLOtorXe5IpQ==",
+  "dgSpecHash": "+CQCsOgKlu8mfsFeKIXYcP1H39S7Y2LoF5JDGroWsXP5+qWW3kE8MEj3WvZhgaPudZcMEBqjk/zTLLpdxP6BTw==",
   "success": true,
-  "projectFilePath": "C:\\git\\LogViewer\\LogViewer\\LogViewer.csproj",
+  "projectFilePath": "C:\\Users\\aaron\\source\\repos\\tst\\LogViewer\\LogViewer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

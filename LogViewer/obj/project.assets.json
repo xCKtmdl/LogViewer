@@ -6074,11 +6074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\LogViewer\\LogViewer\\LogViewer.csproj",
+      "projectUniqueName": "C:\\Users\\aaron\\source\\repos\\tst\\LogViewer\\LogViewer.csproj",
       "projectName": "LogViewer",
-      "projectPath": "C:\\git\\LogViewer\\LogViewer\\LogViewer.csproj",
+      "projectPath": "C:\\Users\\aaron\\source\\repos\\tst\\LogViewer\\LogViewer.csproj",
       "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\LogViewer\\LogViewer\\obj\\",
+      "outputPath": "C:\\Users\\aaron\\source\\repos\\tst\\LogViewer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aaron\\AppData\\Roaming\\NuGet\\NuGet.Config",
