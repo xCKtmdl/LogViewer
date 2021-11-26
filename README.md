@@ -120,16 +120,16 @@ As this seemed like an important entry to keep and display for a user, I added
 \
 the alert rule that valid CEF lines containing the words "malware" or "severe"
 \
-add to that entries Alert level.
+add to that entry's Alert level.
 
 
 I think my application is relatively well-behaved. No files are stored. They
 \
-are processed in-memory and stored as serialized JSON objects. There is a
+are processed in-memory and stored as session serialized JSON objects.
 \
-friendly Errors page. And there is a catch all route for when someone tries
+There is a friendly Errors page. And there is a catch all route for when 
 \
-to access an invalid url for the site.
+someone tries to access an invalid url for the site.
 
 
 There is also a LogViewer.log file in the application's directory where
