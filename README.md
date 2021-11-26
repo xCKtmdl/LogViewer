@@ -9,6 +9,7 @@ Microsoft Visual Studio 2020
 * [Code Checkout](#CodeCheckout)
 * [Azure EC2 website](#AWSsite)
 * [Overview](#Overview)
+* [Misc. Notes](#MiscNotes)
 
 
 ## <a name="CodeCheckout">Code Checkout</a>
@@ -56,3 +57,37 @@ various entries.
 
 
 ![drag-drop](/doc/images/bootstrap-table.jpg)
+
+
+## <a name="MiscNotes">Misc. Notes</a>
+
+
+I do not have the knowledge of a pentester, network engineer, or malware
+\
+analyst. Although I know where to find all these kind of resources and quickly
+\
+assimilate and ingratiate myself to the community.
+
+
+That being said, much of this data is mysterious to me, and I therefore made
+\
+up some arbitrary assumptions and rules as to what to count as cautions, alerts,
+\
+and what information to display.
+
+
+I found someone's page that had some notes on their Adlumin coding assessment
+
+
+<a href="https://dariocarlino908.medium.com/parser-coding-assesment-slash-project-4a0b559a50d8">Parser Coding Assesment</a>
+
+
+In this person's code they seem to use cs1=WCU-External-Inbound and 
+\
+dhost=DTM-AdluminMBP as Private IP rules. Although I decided to use more
+\
+naive methods in my code to calculate the validity of an ip address or
+\
+whether or not it is private, I still decided to highlight these features
+\
+as you can see the blue color I use for recognized Adlumin traffic.
