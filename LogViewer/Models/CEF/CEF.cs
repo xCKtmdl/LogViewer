@@ -20,10 +20,12 @@ namespace LogViewer.Models.CEF
         public string cs1Style { get; set; }
         public int mysteryNumber { get; set; }
         public string SourceIP {get; set;}
+        public bool SourceIPvalid { get; set; }
         public string SourceIPstyle { get; set; }
         public bool SourceIP_Private { get; set; }
       
         public string Dest_IP { get; set; }
+        public bool Dest_IPvalid { get; set; }
         public string Dest_IPStyle { get; set; }
         public bool Dest_IP_Private { get; set; }
         

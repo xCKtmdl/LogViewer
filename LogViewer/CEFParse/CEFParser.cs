@@ -52,6 +52,13 @@ namespace LogViewer.CEFParse
             {
                 CEF cef = new CEF();
 
+                cef.AlertLevel = 0;
+
+                if (match.Value.ToLower().Contains("malware") || match.Value.ToLower().Contains("severe"))
+                {
+                    cef.AlertLevel = cef.AlertLevel + 1;
+                }
+
                 var regExMysteryNumbers = Regex.Matches(match.Value, @"^<([0-9]).>");
                 var regExMysteryNumber = regExMysteryNumbers.ToArray()[0];
                 string strMysteryNumber = regExMysteryNumber.Value.Replace("<", String.Empty).Replace(">",String.Empty);
@@ -67,8 +74,8 @@ namespace LogViewer.CEFParse
                 cef.Dest_IP = regExDestIP.Value.Substring(regExDestIP.Value.IndexOf("="), regExDestIP.Value.Length - regExDestIP.Value.IndexOf("=")).Trim();
                 cef.Dest_IP = cef.Dest_IP.Replace("=",String.Empty);
 
-                blnValid = IsIPv4(cef.Dest_IP);
-                if (!blnValid)
+                cef.Dest_IPvalid = IsIPv4(cef.Dest_IP);
+                if (!cef.Dest_IPvalid)
                 {
                     StringBuilder sb = new StringBuilder();
                     sb.AppendLine("file: " + file.FileName);
@@ -76,8 +83,8 @@ namespace LogViewer.CEFParse
                     sb.AppendLine("dst: " + cef.Dest_IP);
                     OutLog log = new OutLog();
                     log.Log(sb.ToString());
-                    idCount = idCount + 1;
-                    continue;
+                 //   idCount = idCount + 1;
+                 //   continue;
                 }
 
                 cef.Dest_IP_Private = _IsPrivate(cef.Dest_IP);
@@ -87,8 +94,8 @@ namespace LogViewer.CEFParse
                 cef.SourceIP = regExSourceIP.Value.Substring(regExSourceIP.Value.IndexOf("="), regExSourceIP.Value.Length - regExSourceIP.Value.IndexOf("=")).Trim();
                 cef.SourceIP = cef.SourceIP.Replace("=", String.Empty);
 
-                blnValid = IsIPv4(cef.SourceIP);
-                if (!blnValid)
+                cef.SourceIPvalid = IsIPv4(cef.SourceIP);
+                if (!cef.SourceIPvalid)
                 {
                     StringBuilder sb = new StringBuilder();
                     sb.AppendLine("file: " + file.FileName);
@@ -96,8 +103,8 @@ namespace LogViewer.CEFParse
                     sb.AppendLine("src: " + cef.SourceIP);
                     OutLog log = new OutLog();
                     log.Log(sb.ToString());
-                    idCount = idCount + 1;
-                    continue;
+                 //   idCount = idCount + 1;
+                 //   continue;
                 }
 
                 cef.SourceIP_Private = _IsPrivate(cef.SourceIP);
@@ -159,7 +166,7 @@ namespace LogViewer.CEFParse
 
 
 
-                if (cef.SourceIP_Private)
+                if (cef.SourceIP_Private && cef.SourceIPvalid)
                 {
                     cef.SourceIPstyle = "btn btn-light";
                    
@@ -169,7 +176,7 @@ namespace LogViewer.CEFParse
                     cef.SourceIPstyle = "btn btn-warning";
                    
                 }
-                if (cef.Dest_IP_Private)
+                if (cef.Dest_IP_Private && cef.Dest_IPvalid)
                 {
                     cef.Dest_IPStyle = "btn btn-light";
                    
@@ -218,7 +225,7 @@ namespace LogViewer.CEFParse
         public CEF GetAlertLevel(CEF cef)
         {
             CEF retCEF = cef;
-            int n = 0;
+            int n = cef.AlertLevel;
             if (cef.SourceIP_Private && !cef.Dest_IP_Private)
             {
                 n = n + 1;
