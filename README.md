@@ -9,7 +9,7 @@ Microsoft Visual Studio 2020
 * [Code Checkout](#CodeCheckout)
 * [Azure EC2 website](#AWSsite)
 * [Overview](#Overview)
-* [Misc. Notes](#MiscNotes)
+
 
 ## <a name="CodeCheckout">Code Checkout</a>
 
@@ -23,16 +23,21 @@ git clone https://github.com/xCKtmdl/LogViewer.git
 
 ## <a name="Overview">Overview</a>
 
-You can only drag and drop .txt files.
-
-
-There is only one arbitrarly chosen Alert rule which is if the src ip is private and the dst ip is public.
-
-
-## <a name="MiscNotes">Misc. Notes</a>
-
-There was an invalid ip address in the provided sample log. It had a number 257.
+I made the constraint to only accept plain text .txt files. You will find in
 \
-In this directory there are two files: sample.log which is a corrected one, 
+the root directory of the repo the file original.txt which is the sample data
 \
-and original.log which is the original.
+you provided me.
+
+Drag and drop the .txt of cef network data you want to use here in the
+\
+grey area.
+
+![drag-drop](/doc/images/drag-drop.jpg)
+
+
+If there is no problem with the file, you will see your data loaded here
+\
+in the Dashboard page.
+
+![drag-drop](/doc/images/drag-drop.jpg)
